@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times, plus 'Hi' 1 time
+i=0
+while [ $i -lt 10 ]; do
+	echo "Best School"
+	if (( i == 8 )); then
+		echo "Hi"
+	fi
+	(( i++ ))
+done
