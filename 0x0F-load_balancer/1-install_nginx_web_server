@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# configures a new nginx server on ubuntu, create index.nginx-demian.html, test it
+apt-get -y update
+apt-get -y install nginx
+
+service nginx start
+bash -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+service nginx restart
