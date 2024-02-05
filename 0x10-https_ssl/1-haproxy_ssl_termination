@@ -45,8 +45,8 @@ frontend samuelhetty.tech-frontend
         http-request add-header X-Forwarded-Proto http
         http-request redirect scheme https code 301 unless { ssl_fc }
         default_backend samuelhetty.tech-backend
-frontend www_frontend
-        bind 0.0.0.0:443 ssl crt /etc/haproxy/certs/www.samuelhetty.tech.pem
+frontend samuelhetty.tech-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.samuelhetty.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend samuelhetty.tech-backend
 #--samuelhetty.tech-params-end--
