@@ -14,7 +14,10 @@ def make_get_request(subreddit, after):
         payload = {'after': after, 'limit': '100'}
     else:
         payload = {'limit': '100'}
-    header = {'user-agent': '0x16-api_advanced:project/1.0 (by /u/samuelhetty)', 'over18': 'yes'}
+    header = {
+        'user-agent': '0x16-api_advanced:project/1.0 (by /u/samuelhetty)',
+        'over18': 'yes'
+    }
     response = requests.get(
         url, headers=header, params=payload, allow_redirects=False
     )
