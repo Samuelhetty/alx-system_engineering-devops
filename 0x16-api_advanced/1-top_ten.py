@@ -9,9 +9,7 @@ def top_ten(subreddit):
     """
     returns the top ten hot posts for subreddit
     """
-    domain = 'https://www.reddit.com'
-    path = '/r/{}/hot.json'.format(subreddit)
-    url = '{}{}'.format(domain, path)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     header = {
         'user-agent': '0x16-api_advanced:project/1.0 (by /u/samuelhetty)',
         'over18': 'yes'
